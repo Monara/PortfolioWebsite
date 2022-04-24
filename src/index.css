@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&family=Major+Mono+Display&family=Hammersmith+One&display=swap');
+
+:root {
+  --orange: rgba(250,188,100,1);
+  --pink: rgba(247,101,101,1);
+  --purple: rgba(138,88,172,1);
+  --blue: rgba(95,88,172,1);
+  --blackest: #1e1c1c;
+  --blacker: #212121;
+  --gray: #2c2c2c;
+  --lighter-gray: #424242;
+  --lightest-gray: #4d4c4c;
+  --font1: 'Hammersmith One', sans-serif;
+  --font2: 'Major Mono Display', monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--blacker);
+  color: var(--lightest-gray);
 }
+
+a { /*override Link styling*/
+  text-decoration: none;
+  color: var(--lightest-gray);
+}
+
+h1, h2 {
+  font-family: var(--font1);
+  letter-spacing: 0.2vw;
+  font-size: 2.8vw;
+  text-align: right;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 2.2vw;
+}
+
+.gradient {
+  animation: animated-gradient 5s alternate infinite;
+  font-family: var(--font2);
+}
+
+@keyframes animated-gradient {
+  from  {color: var(--purple);}
+  to {color: var(--pink);}
+}
+
