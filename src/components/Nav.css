@@ -10,6 +10,11 @@
     justify-content: center;
 }
 
+.Nav-text {
+    font-size: 0.8vw;
+    text-decoration: line-through;
+} 
+
 .Nav li {
   font-family: var(--font1);
   letter-spacing: 0.2vw;
@@ -20,7 +25,3 @@
   color: var(--gray);
 }
 
-.Nav-text {
-    font-size: 0.8vw;
-    text-decoration: line-through;
-} 

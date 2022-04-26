@@ -4,14 +4,9 @@ import './Star.css';
 const Star = () => {
   
   const randomXY = () => { //random Y position for stars
-    while(true) {
-      let y:number = Math.floor(Math.random() * (95-5+1) + 5);
-      let x:number = Math.floor(Math.random() * (75-5+1) + 5);
-
-      if(!((x>15 && x<45) && (y>25 && y<55))) { //don't overlap glowing circle...will need changing later
-        return [x, y];
-      }
-    }
+    let y:number = Math.floor(Math.random() * (97-3+1) + 3);
+    let x:number = Math.floor(Math.random() * (82-3+1) + 3);
+    return [x, y];
   }
 
   const randomInterval = () => {

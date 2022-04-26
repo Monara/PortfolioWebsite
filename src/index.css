@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces&family=Major+Mono+Display&family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Hammersmith+One&family=Comfortaa:wght@400&display=swap');
 
 :root {
   --orange: rgba(250,188,100,1);
   --pink: rgba(247,101,101,1);
   --purple: rgba(138,88,172,1);
-  --blue: rgba(95,88,172,1);
   --blackest: #1e1c1c;
   --blacker: #212121;
   --gray: #2c2c2c;
@@ -12,6 +11,7 @@
   --lightest-gray: #4d4c4c;
   --font1: 'Hammersmith One', sans-serif;
   --font2: 'Major Mono Display', monospace;
+  --font3: 'Comfortaa', cursive;
 }
 
 body {
@@ -39,13 +39,25 @@ h2 {
   font-size: 2.2vw;
 }
 
+p {
+  font-family: var(--font3);
+  font-size: 0.8vw;
+}
+
+.Main-container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*left to right*/
+  justify-content: center; /**top to bottom*/
+}
+
 .gradient {
-  animation: animated-gradient 5s alternate infinite;
+  animation: gradient 5s alternate infinite;
   font-family: var(--font2);
 }
 
-@keyframes animated-gradient {
+@keyframes gradient {
   from  {color: var(--purple);}
   to {color: var(--pink);}
 }
-

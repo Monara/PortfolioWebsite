@@ -7,23 +7,23 @@ const Nav = () => {
     
   return (
     <ul className="Nav">
-        <li>
+       <li>
           <Link to="/">
-            <span className='gradient'>ABouT</span>
-            <span className='Nav-text'>ABOUT</span>
-          </Link>
+            <span className='gradient'>hOMe</span>
+            <span className='Nav-text'>HOME</span>
+          </Link>  
         </li>
         <li>
-          <Link to="/">
+          <Link to="/projects">
             <span className='gradient'>PRoJecTs</span>
             <span className='Nav-text'>PROJECTS</span>
           </Link>
         </li>
         <li>
-          <Link to="/">
-            <span className='gradient'>ConTacT</span>
-            <span className='Nav-text'>CONTACT</span>
-          </Link>  
+          <Link to="/about">
+            <span className='gradient'>ABouT</span>
+            <span className='Nav-text'>ABOUT</span>
+          </Link>
         </li>
     </ul>
   )
