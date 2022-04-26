@@ -1,24 +1,25 @@
 import React, {useState} from 'react';
 import './Modal.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faChevronRight, faChevronLeft} from '@fortawesome/free-solid-svg-icons';
-import Images from './Modal-content'; //images themselves in PUBLIC
+import {faChevronRight, faChevronLeft, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 
-const Modal = () => {
+const Modal = ({isShown, show, images} : {isShown:boolean, show:any, images:any}) => {
 
     let [index, setIndex] = useState(0);
     
     return (
         
         <div className='Modal-container'>
+            {isShown ?
             <div className='row'>
-                <div className='arrow left-arrow' onClick={()=> { index > 0 ? setIndex(--index) : setIndex(Images.length-1) }}><FontAwesomeIcon className='arrow-icon' icon={faChevronLeft} /></div>
+                <div className='gallery-icon left-arrow' onClick={()=> { index > 0 ? setIndex(--index) : setIndex(images.length-1) }}><FontAwesomeIcon icon={faChevronLeft} /></div>
                 <div className='image'>
-                    <img src={Images[index].image} alt='Screenshot of website'/>
+                    <img src={images[index].image} alt='Screenshot of website'/>
                 </div>
-                <div className='arrow right-arrow' onClick={()=> { index === Images.length-1 ? setIndex(0) : setIndex(++index) }}><FontAwesomeIcon className='arrow-icon' icon={faChevronRight} /></div>
-            </div>
+                <div className='gallery-icon right-arrow' onClick={()=> { index === images.length-1 ? setIndex(0) : setIndex(++index) }}><FontAwesomeIcon icon={faChevronRight} /></div>
+                <div className='gallery-icon xmark' onClick={()=>{show(false);}}><FontAwesomeIcon icon={faXmark} /></div>
+            </div> : <></> }
         </div>
        
     )
