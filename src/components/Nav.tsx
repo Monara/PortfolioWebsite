@@ -6,26 +6,28 @@ import './Nav.css';
 const Nav = () => {
     
   return (
-    <ul className="Nav">
-       <li>
-          <Link to="/">
-            <span className='gradient'>hOMe</span>
-            <span className='Nav-text'>HOME</span>
-          </Link>  
+    <div className='Nav'>
+      <ul>
+        <li>
+            <Link to="/">
+              <span className='gradient'>hOMe</span>
+              <span className='cross-text'>HOME</span>
+            </Link>  
         </li>
         <li>
-          <Link to="/projects">
-            <span className='gradient'>PRoJecTs</span>
-            <span className='Nav-text'>PROJECTS</span>
-          </Link>
+            <Link to="/projects">
+              <span className='gradient'>PRoJecTs</span>
+              <span className='cross-text'>PROJECTS</span>
+            </Link>
         </li>
         <li>
-          <Link to="/about">
-            <span className='gradient'>ABouT</span>
-            <span className='Nav-text'>ABOUT</span>
-          </Link>
+            <Link to="/about">
+              <span className='gradient'>ABouT</span>
+              <span className='cross-text'>ABOUT</span>
+            </Link>
         </li>
-    </ul>
+      </ul>
+    </div>
   )
 }
 

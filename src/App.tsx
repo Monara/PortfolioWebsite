@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Nav from './components/Nav';
 import Title from './components/Title';
 import About from './components/About';
@@ -12,8 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className="row">
+        <div className='row'>
           <Routes>
             <Route path='/' element={<Title stars={stars}/>} />
             <Route path='/projects' element={<Projects />}/>
@@ -21,7 +19,6 @@ function App() {
           </Routes>
           <Nav />  
         </div>
-      </div>
     </BrowserRouter>  
   );
 }

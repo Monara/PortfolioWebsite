@@ -4,11 +4,11 @@
     border-bottom: 2px dotted var(--gray);
 }
 
-.image-container  img{
+.image-container img{
     width: 100%;
     opacity: 0.8;
-    border: 2px dotted var(--gray);
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .link-container {

@@ -11,7 +11,7 @@ const Title = ({stars} : {stars:number}) => {
     <div className='Main-container'>
         <div className='orbit-big'>
             <div className='orbit-small'>
-              <div className="glowing-circle"></div>
+              <div className='glowing-circle'></div>
             </div>
             <div className='text'>
               <h1>HI, I'M <span className='gradient'>M</span>ONARA,</h1>
