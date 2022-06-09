@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './Star.css';
 
-const Star = () => {
+const Star = ({delay} : {delay:number}) => {
   
-  const randomXY = () => { //random Y position for stars
+  const randomXY = () => { //random XY position for stars, but not on edges
     let y:number = Math.floor(Math.random() * (97-3+1) + 3);
     let x:number = Math.floor(Math.random() * (82-3+1) + 3);
     return [x, y];
@@ -17,7 +17,7 @@ const Star = () => {
   const [xy, setXY] = useState(randomXY());
 
   useEffect(() => {
-    const interval = setInterval(() => {setTimer(randomInterval()); setXY(randomXY());}, (timer * 1000)); //timer in seconds
+    const interval = setInterval(() => {setTimer(randomInterval()); setXY(randomXY()); console.log(timer);}, (timer * 1000)); //timer in seconds
     return () => clearInterval(interval);
   }, [timer]);
 
@@ -27,13 +27,17 @@ const Star = () => {
     top: `${xy[1]}%`
   }
 
+  //error if short hands are mixed with separate values, so all separate:
   const style2 = {
-      animation: `glowing-star ${timer}s ease-in-out infinite`
+    animationName: 'glowing-star',
+    animationDuration: `${timer}s`,
+    animationTimingFunction: 'ease-in-out',
+    animationDelay: `${delay}s`
   }
 
   return (
-    <div className='star' style={style1}>
-        <div className='glowing-star' style={style2}></div>
+    <div className='star-div' style={style1}>
+        <div className='star' style={style2}></div>
     </div>
   )
 }

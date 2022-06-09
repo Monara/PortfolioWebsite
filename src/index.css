@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Hammersmith+One&family=Comfortaa:wght@400&display=swap');
 
 :root {
-  --orange: rgba(250,188,100,1);
-  --pink: rgba(247,101,101,1);
-  --purple: rgba(138,88,172,1);
-  --blackest: #1e1c1c;
-  --blacker: #212121;
-  --gray: #2c2c2c;
-  --lighter-gray: #424242;
-  --lightest-gray: #4d4c4c;
+  --orange: rgba(250,188,100,0.7);
+  --pink: rgba(247,101,101,0.7);
+  --purple: rgba(170,87,162,0.7);
+  --nav: #1e1c1c;
+  --black: #212121;
+  --orbit-gray: #2c2c2c;
+  --orbit-l-gray: #424242;
+  --light-gray: #4d4c4c;
+  --lightest-gray: #626262;
   --font1: 'Hammersmith One', sans-serif;
   --font2: 'Major Mono Display', monospace;
   --font3: 'Comfortaa', cursive;
@@ -17,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--blacker);
+  background-color: var(--black);
   color: var(--lightest-gray);
 }
 
@@ -28,30 +29,22 @@ a { /*override Link styling*/
 
 h1, h2 {
   font-family: var(--font1);
-  letter-spacing: 0.2vw;
-  font-size: 2.8vw;
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
   text-align: right;
   font-weight: normal;
   line-height: 100%;
+  color: var(--light-gray);
 }
 
 h2 {
-  font-size: 2.2vw;
+  font-size: 2rem;
 }
 
 p {
   font-family: var(--font3);
-  font-size: 0.8vw;
-}
-
-#about {
-  padding: 0 10%;
-  text-align: justify;
-  text-align-last: left;
-}
-
-#copy-icon {
-  cursor: pointer;
+  font-size: 1rem;
+  line-height: 150%;
 }
 
 .row {
@@ -60,11 +53,12 @@ p {
 }
 
 .Main-container {
-  padding-top: 5vw;
-  width: 85vw;
+  width: 90vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .gradient {
@@ -73,7 +67,7 @@ p {
 }
 
 @keyframes gradient {
-  from  {color: var(--purple);}
-  to {color: var(--pink);}
+  from  {color: var(--pink);}
+  to {color: var(--purple);}
 }
 

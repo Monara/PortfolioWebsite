@@ -1,0 +1,68 @@
+#about-title {
+  margin-top: -30vh;
+  z-index: 2;
+  color: var(--pink);
+  font-family: var(--font1);
+  text-transform: uppercase;
+}
+
+#contact-title {
+  color: var(--pink);
+  font-family: var(--font1);
+  text-transform: uppercase;
+}
+
+#about-text {
+    padding: 0 20vw;
+    text-align: justify;
+    text-align-last: left;
+}
+
+#github:hover {
+  color: var(--pink);
+}
+
+#email {
+    border: none;
+    outline: none;
+    width: 17rem;
+    font-family: var(--font3);
+    font-size: 1rem;
+    color: var(--lightest-gray);
+    background-color: var(--black);
+} 
+  
+#copy-icon {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+#copy-icon:hover {
+  color: var(--pink);
+}
+
+#meteor {
+  color: var(--orange);
+  font-size: 2.5rem;
+}
+
+#moon img {
+  height: 30vw;
+  filter: brightness(40%);
+}
+
+#trees {
+  margin-top: -20vh;
+  height: 50vh;
+  width: 100%;
+  background-image: url('../img/trees.png');
+  z-index: -1;
+  
+}
+
+.icons {
+  font-size: 1.5rem;
+  line-height: 50%;
+}
+
+  

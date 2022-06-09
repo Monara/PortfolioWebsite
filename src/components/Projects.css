@@ -1,0 +1,56 @@
+#projects-title {
+    color: var(--orange);
+    margin-top: 5vh;
+}
+
+#cloud1-div {
+    width: 80vw;
+    justify-content: flex-end;
+}
+
+#cloud1-div img {
+    width: 30vw;
+    filter: brightness(50%); /*not opacity: 0.4; as stars show through*/
+    animation: cloud-move 5s ease-in-out alternate infinite;
+}
+
+#cloud2-div {
+    width: 85vw;
+    filter: brightness(50%); /*not opacity as stars show through*/
+    position: absolute;
+    margin-top: 30vh;
+    z-index: -1;
+}
+
+#cloud2-div img {
+    width: 35vw;
+    animation: cloud-move 7s ease-in-out alternate infinite;
+}
+
+#saturn-div {
+    margin-top: -2vh;
+    width: 40vw;
+    justify-content: flex-start;
+    z-index: -1;
+}
+
+#saturn-div img {
+    filter: brightness(28%);
+    width: 10vw;
+}
+
+#video-div {
+    z-index: -1;
+    width: 90vw;
+    margin-top: -80vh;
+}
+
+#video-div video {
+    opacity: 0.2;
+    filter: hue-rotate(135deg); 
+}
+
+@keyframes cloud-move {
+    from {transform: translate(0, 0);}
+    to {transform: translate(2rem, 0);}
+}

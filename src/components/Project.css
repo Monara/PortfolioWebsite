@@ -1,21 +1,36 @@
 .Project-container {
-    width: 55%;
-    padding: 2% 0;
-    border-bottom: 2px dotted var(--gray);
+    width: 45vw;
+    padding-top: 2rem;
+}
+
+.Project-container h2 {
+    color: var(--orange);
 }
 
 .image-container img{
     width: 100%;
-    opacity: 0.8;
+    filter: brightness(90%);
     cursor: pointer;
     border-radius: 15px;
 }
 
-.link-container {
-    display: flex;
-    align-items:stretch;
+.text-container {
+    background-color: var(--black);
+    position: relative;
+    margin-top: -5.4rem;
+    opacity: 0.9;
+    border-radius: 0 0 13px 13px;
 }
 
-.project-icon {
-    font-size: 1.5vw;
+.text-container p {
+    padding: 3%;
+    font-size: 0.8rem;
+}
+
+.link-icon {
+    color: var(--light-gray);
+}
+
+.link-icon:hover {
+    color: var(--orange); 
 }

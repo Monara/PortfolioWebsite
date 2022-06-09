@@ -1,30 +1,30 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './Nav.css';
 
 
 const Nav = () => {
+
+  const overline = 'overline';
     
   return (
     <div className='Nav'>
+
       <ul>
         <li>
-            <Link to="/">
-              <span className='gradient'>hOMe</span>
-              <span className='cross-text'>HOME</span>
-            </Link>  
+          <NavLink to="/" className={({isActive}) => isActive ? overline : undefined }>
+            home
+          </NavLink>  
         </li>
         <li>
-            <Link to="/projects">
-              <span className='gradient'>PRoJecTs</span>
-              <span className='cross-text'>PROJECTS</span>
-            </Link>
+          <NavLink to="/projects" className={({isActive}) => isActive ? overline : undefined }>
+            projects
+          </NavLink>
         </li>
         <li>
-            <Link to="/about">
-              <span className='gradient'>ABouT</span>
-              <span className='cross-text'>ABOUT</span>
-            </Link>
+          <NavLink to="/about" className={({isActive}) => isActive ? overline : undefined }>
+            about
+          </NavLink>
         </li>
       </ul>
     </div>

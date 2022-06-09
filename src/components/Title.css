@@ -1,3 +1,11 @@
+.circle-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .background-text h2 {
     margin:0;
     font-family: var(--font1);
@@ -6,12 +14,13 @@
 }
 
 .glowing-circle {
-    transform: skew(-10deg, -10deg);
+    margin-top: 25vh;
     width: 15vw;
     height: 15vw;
     border-radius:50%;
-    background-color: var(--blacker);
+    background-color: var(--black);
     animation: glowing-sun 5s ease-in-out infinite alternate;
+    z-index: 1;
 }
 
 .glowing-circle:hover {
@@ -22,11 +31,11 @@
     width: 40vw;
     height: 30vw;
     border-radius:50%;
-    border: 2px dotted var(--gray);
+    border: 2px dotted var(--orbit-gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: skew(10deg, 10deg);
+    transform: skew(-10deg, -10deg);
     animation: orbit-border 4s ease-in-out infinite;
   }
 
@@ -34,10 +43,14 @@
     width: 60vw;
     height: 40vw;
     border-radius: 50%;
-    border: 2px dotted var(--gray);
+    border: 2px dotted var(--orbit-gray);
     animation: orbit-border 8s ease-in-out infinite;
     position: absolute;
     z-index: 1;
+}
+
+.text {
+    margin: 10vh 2vw 2vh 40vw;
 }
 
 @keyframes glowing-sun {
@@ -46,9 +59,9 @@
 }
 
 @keyframes orbit-border {
-    0% {border-color: var(--gray); border-bottom-color: var(--lighter-gray);}
-    25% {border-color: var(--gray); border-right-color: var(--lighter-gray);}
-    50% {border-color: var(--gray); border-top-color: var(--lighter-gray);}
-    75% {border-color: var(--gray); border-left-color: var(--lighter-gray);}
-    100% {border-color: var(--gray); border-bottom-color: var(--lighter-gray);}
+    0% {border-color: var(--orbit-gray); border-bottom-color: var(--orbit-l-gray);}
+    25% {border-color: var(--orbit-gray); border-right-color: var(--orbit-l-gray);}
+    50% {border-color: var(--orbit-gray); border-top-color: var(--orbit-l-gray);}
+    75% {border-color: var(--orbit-gray); border-left-color: var(--orbit-l-gray);}
+    100% {border-color: var(--orbit-gray); border-bottom-color: var(--orbit-l-gray);}
 }

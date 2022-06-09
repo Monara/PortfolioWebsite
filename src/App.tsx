@@ -3,23 +3,26 @@ import Nav from './components/Nav';
 import Title from './components/Title';
 import About from './components/About';
 import Projects from './components/Projects';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-  const stars:number = 50;
+  const stars:number = 1;
+  const location = useLocation();
 
   return (
-    <BrowserRouter>
-        <div className='row'>
-          <Routes>
-            <Route path='/' element={<Title stars={stars}/>} />
-            <Route path='/projects' element={<Projects />}/>
-            <Route path='/about' element={<About />}/>
-          </Routes>
-          <Nav />  
-        </div>
-    </BrowserRouter>  
+    
+      <div className='row'>
+        <AnimatePresence exitBeforeEnter> {/**without exit the next element is partially shown */}
+        <Routes location={location} key={location.key}>
+          <Route path='/' element={<Title stars={stars} />} />
+          <Route path='/projects' element={<Projects stars={stars} />}/>
+          <Route path='/about' element={<About stars={stars} />}/>
+        </Routes>
+        </AnimatePresence> 
+        <Nav />  
+      </div>
   );
 }
 
