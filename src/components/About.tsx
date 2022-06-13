@@ -4,6 +4,7 @@ import {faCopy, faMeteor} from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faHtml5, faCss3Alt, faJs, faPhp, faReact, faNodeJs} from '@fortawesome/free-brands-svg-icons';
 import './About.css';
 import moon from '../img/moon.png';
+import trees from '../img/trees.png';
 import { motion } from 'framer-motion';
 import Star from  '../components/Star';
 
@@ -22,7 +23,7 @@ const About = ({stars} : {stars:number}) => {
     },
     animate: {
       opacity: 1, //limited brightness in css. Can't change filter here
-      y: '-30vh',
+      y: '-25vh',
       x: '25vw',
       rotate: 180,
       transition: {duration: 8}
@@ -41,8 +42,8 @@ const About = ({stars} : {stars:number}) => {
       y: '-100vh'
     },
     animate: {
-      y: '30vh',
-      x: '-50vw',
+      y: '15vh',
+      x: '-100vw',
       transition: {duration: 4, delay: 7}
     },
   }
@@ -97,11 +98,11 @@ const About = ({stars} : {stars:number}) => {
           <FontAwesomeIcon icon={faPhp} />
         </p></div>  
         <h2 id='contact-title'><span className=''>ConTacT Me</span></h2>
-        <div className='row'>
+        <div className='row' id='text-container'>
           <input type='text' id='email' value={email} readOnly/>
           <FontAwesomeIcon id='copy-icon' icon={faCopy} onClick={() => copyContact(email)}/>
         </div>
-      <div id='trees'></div>
+      <div id='trees'><img src={trees} /></div>
       </motion.div>
       <div className='star-field'>{Array.from(Array(stars), (_, i) => <Star key={i} delay={7} />)}</div>
     </div>    

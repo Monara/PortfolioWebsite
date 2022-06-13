@@ -29,8 +29,8 @@ const Title = ({stars} : {stars:number}) => {
     },
     exit: {
       x: '-100vw',
-      width: '30vw',
-      height: '30vw',
+      width: '25vw',
+      height: '25vw',
       transition: { duration: 2}
     }
   };
@@ -51,7 +51,8 @@ const Title = ({stars} : {stars:number}) => {
 
   return (
 
-    <div id='title-page' className='Main-container'>
+    <div className='Main-container'>
+      <motion.div exit={{opacity: 0, transition: {duration: 1}}}>{Array.from(Array(stars), (_, i) => <Star key={i} delay={1}/>)}</motion.div>  
       <div className='circle-container'>        
         <motion.div className='orbit-big'
           variants={orbitBigVariants}
@@ -74,9 +75,8 @@ const Title = ({stars} : {stars:number}) => {
         >
             <h1>HI, I'M <span className='gradient'>M</span>ONARA,</h1>
             <h2>MY LONG SUBTITLE</h2>
-        </motion.div>      
+        </motion.div>    
       </div>
-      <div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={1}/>)}</div>
     </div>
   )
 }

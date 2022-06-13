@@ -1,5 +1,6 @@
 #about-title {
-  margin-top: -30vh;
+  position: relative;
+  margin-top: -20%;
   z-index: 2;
   color: var(--pink);
   font-family: var(--font1);
@@ -19,13 +20,18 @@
 }
 
 #about-text {
-    padding: 0 20vw;
+    margin: 0 20%;
     text-align: justify;
     text-align-last: left;
 }
 
 #github:hover {
   color: var(--pink);
+}
+
+#text-container {
+  width: 100%;
+  justify-content: center;
 }
 
 #email {
@@ -58,12 +64,14 @@
 }
 
 #trees {
-  margin-top: -20vh;
-  height: 50vh;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  background-image: url('../img/trees.png');
   z-index: -1;
-  
+}
+
+#trees img {
+  width: 100%;
 }
 
 .icons {
