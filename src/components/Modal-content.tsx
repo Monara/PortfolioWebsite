@@ -1,71 +1,24 @@
 const Images1 = [
-    {
-        image: '../../img/cp1.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/cp2.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/cp3.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/cp4.png',
-        caption: 'Image with no description'
-    }
+    '../../img/cp2.png',
+    '../../img/cp3.png',
+    '../../img/cp4.png',
+    '../../img/cp5.png'
 ];
 
 const Images2 = [
-    {
-        image: '../../img/he1.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/he2.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/he3.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/he4.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/he5.png',
-        caption: 'Image with no description'
-    },
-
+    '../../img/he2.png',
+    '../../img/he3.png',
+    '../../img/he4.png',
+    '../../img/he5.png',
+    '../../img/he6.png',
 ];
 
 const Images3 = [
-    {
-        image: '../../img/aof.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/aof2.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/aof3.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/aof4.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/aof5.png',
-        caption: 'Image with no description'
-    },
-    {
-        image: '../../img/aof6.png',
-        caption: 'Image with no description'
-    }
+    '../../img/aof2.png',
+    '../../img/aof3.png',
+    '../../img/aof4.png',
+    '../../img/aof5.png',
+    '../../img/aof6.png',
 ];
 
 export {Images1, Images2, Images3}; /**not default with multiple */

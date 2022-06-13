@@ -8,7 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-  const stars:number = 1;
+  const stars:number = 10;
   const location = useLocation();
 
   return (

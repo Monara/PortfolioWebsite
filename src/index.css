@@ -22,7 +22,7 @@ body {
   color: var(--lightest-gray);
 }
 
-a { /*override Link styling*/
+a { /*override link styling*/
   text-decoration: none;
   color: var(--lightest-gray);
 }
@@ -53,21 +53,11 @@ p {
 }
 
 .Main-container {
-  width: 90vw;
-  min-height: 100vh;
+  width: 90%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-}
-
-.gradient {
-  animation: gradient 5s alternate infinite;
-  font-family: var(--font2);
-}
-
-@keyframes gradient {
-  from  {color: var(--pink);}
-  to {color: var(--purple);}
 }
 

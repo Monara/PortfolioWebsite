@@ -1,5 +1,5 @@
 .Project-container {
-    width: 45vw;
+    width: 50%;
     padding-top: 2rem;
 }
 
@@ -10,14 +10,13 @@
 .image-container img{
     width: 100%;
     filter: brightness(90%);
-    cursor: pointer;
     border-radius: 15px;
 }
 
 .text-container {
     background-color: var(--black);
     position: relative;
-    margin-top: -5.4rem;
+    margin-top: -10%;
     opacity: 0.9;
     border-radius: 0 0 13px 13px;
 }

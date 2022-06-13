@@ -1,48 +1,48 @@
 #projects-title {
     color: var(--orange);
-    margin-top: 5vh;
 }
 
 #cloud1-div {
-    width: 80vw;
+    width: 80%;
     justify-content: flex-end;
+    margin-top: 5%;
 }
 
 #cloud1-div img {
-    width: 30vw;
+    width: 35%;
     filter: brightness(50%); /*not opacity: 0.4; as stars show through*/
     animation: cloud-move 5s ease-in-out alternate infinite;
 }
 
 #cloud2-div {
-    width: 85vw;
+    width: 80%;
     filter: brightness(50%); /*not opacity as stars show through*/
     position: absolute;
-    margin-top: 30vh;
+    margin-top: 18%;
     z-index: -1;
 }
 
 #cloud2-div img {
-    width: 35vw;
+    width: 40%;
     animation: cloud-move 7s ease-in-out alternate infinite;
 }
 
 #saturn-div {
-    margin-top: -2vh;
-    width: 40vw;
+    margin-top: -2%;
+    width: 40%;
     justify-content: flex-start;
     z-index: -1;
 }
 
 #saturn-div img {
-    filter: brightness(28%);
-    width: 10vw;
+    filter: brightness(25%);
+    width: 25%;
 }
 
 #video-div {
     z-index: -1;
-    width: 90vw;
-    margin-top: -80vh;
+    width: 100%;
+    margin-top: -80%;
 }
 
 #video-div video {

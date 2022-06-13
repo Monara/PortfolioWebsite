@@ -17,7 +17,7 @@ const Star = ({delay} : {delay:number}) => {
   const [xy, setXY] = useState(randomXY());
 
   useEffect(() => {
-    const interval = setInterval(() => {setTimer(randomInterval()); setXY(randomXY()); console.log(timer);}, (timer * 1000)); //timer in seconds
+    const interval = setInterval(() => {setTimer(randomInterval()); setXY(randomXY());}, (timer * 1000)); //timer in seconds
     return () => clearInterval(interval);
   }, [timer]);
 
