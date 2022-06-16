@@ -10,17 +10,34 @@ const Project = ({title, img, description, github, website, state, imgs} : {titl
   return (
 
     <div className='Project-container'>
+
       <h2>{title} <a href={github} target='_blank' rel='noopener noreferrer'><FontAwesomeIcon className='link-icon' icon={faGithub} /> </a> 
         {website ? 
-          <a href={website} target='_blank' rel='noopener noreferrer'><FontAwesomeIcon className='link-icon' icon={faArrowUpRightFromSquare} /> </a> 
+          <><a href={website} target='_blank' rel='noopener noreferrer'><FontAwesomeIcon className='link-icon' icon={faArrowUpRightFromSquare} /></a></> 
           : <></>}
       </h2>
+
       { state && imgs ?
-      <div className='image-container' onClick={() => state({show: true, images: imgs})}><img style={{cursor: 'pointer'}} src={img} alt='Portfolio website screenshot'/></div> 
-      : <div className='image-container'><img src={img} alt='Portfolio website screenshot'/></div> }
-      <div className='text-container'>
-        <p>{description}</p>   
-      </div>
+
+      <div className='image-container' onClick={() => state({show: true, images: imgs})}>
+        
+        <img style={{cursor: 'pointer'}} src={img} alt='Portfolio website screenshot'/>
+
+        <div className='text-container'>
+          <p>{description}</p>   
+        </div>
+      </div> 
+      :
+      <div className='image-container'>
+    
+        <img src={img} alt='Portfolio website screenshot'/>
+
+        <div className='text-container'>
+          <p>{description}</p>   
+        </div>
+
+      </div> }
+      
     </div>
   )
 }

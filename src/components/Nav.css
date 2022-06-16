@@ -2,8 +2,22 @@
   right: 0;
   top: 0;
   position: fixed;
-  width: 10%;
   color: var(--light-gray);
+}
+
+#Nav-fullscreen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#Nav-narrow {
+  width: 10%;
+}
+
+#menu {
+  display: none;
 }
 
 .Nav ul {
@@ -22,16 +36,53 @@ ul > li {
   margin-left: 5%;
   padding: 5%;
   font-family: var(--font1);
-  letter-spacing: 0.4rem;
-  font-size: 1rem;
+  letter-spacing: 0.4em;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 ul > li:hover, .overline {
   text-decoration: overline;
 }
 
+.pink {
+  color: var(--pink);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.purple {
+  color: var(--purple);
+}
+.gray {
+  color: var(--light-gray);
+}
+
+#xmark, #ellipsis {
+  font-size: 1.6em;
+  z-index: 1;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1280px) {
-  .Nav {
+  #Nav-narrow {
     display: none;
+  }
+
+  #menu {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    color: var(--light-gray);
+    font-size: 1.6em;
+    z-index: 1;
+  }
+
+  ul > li {
+    letter-spacing: 0.2em;
+    line-height: 60%;
   }
 }

@@ -62,7 +62,7 @@ const Projects = ({stars} : {stars:number}) => {
         images={modal.images}
         /> : <></> }
         <Project 
-          title='COCKTAIL WEBSITE' 
+          title='COCKTAIL PARTY' 
           img={img1}
           description='HTML, CSS, JavaScript, React.js, Node.js, SQL, Express.js. Bilingual, responsive, with a custom API.'
           github='https://www.github.com/' 
@@ -70,9 +70,9 @@ const Projects = ({stars} : {stars:number}) => {
           state={setModal}
           imgs={Images1}
           
-        /> {/*data from child https://www.freecodecamp.org/news/pass-data-between-components-in-react/*/}
+        />
         <Project 
-          title='EVENTS APP' 
+          title='HELSINKI EVENTS' 
           img={img2}
           description='HTML, Tailwind CSS, JavaScript, React.js, Node.js, Express.js. Uses MyHelsinki Open API.'
           github='https://www.github.com/' 
@@ -82,7 +82,7 @@ const Projects = ({stars} : {stars:number}) => {
           
         />
       <Project 
-        title='HOBBY WEBSITE' 
+        title='ART OF FORMULATION' 
         img={img3} 
         description='Back-to-basics tech stack (HTML, CSS, JavaScript, PHP, SQL). Contains a custom calculation widget.' 
         github='https://www.github.com/' 

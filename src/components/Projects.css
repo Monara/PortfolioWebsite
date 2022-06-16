@@ -14,29 +14,28 @@
     animation: cloud-move 5s ease-in-out alternate infinite;
 }
 
-#cloud2-div {
-    width: 80%;
-    filter: brightness(50%); /*not opacity as stars show through*/
-    position: absolute;
-    margin-top: 18%;
-    z-index: -1;
-}
-
-#cloud2-div img {
-    width: 40%;
-    animation: cloud-move 7s ease-in-out alternate infinite;
-}
-
 #saturn-div {
-    margin-top: -2%;
-    width: 40%;
+    margin-top: -10%;
+    width: 80%;
     justify-content: flex-start;
     z-index: -1;
 }
 
 #saturn-div img {
     filter: brightness(25%);
-    width: 25%;
+    width: 15%;
+}
+
+#cloud2-div {
+    width: 80%;
+    filter: brightness(50%); /*not opacity as stars show through*/
+    margin-top: -5%;
+    z-index: -1;
+}
+
+#cloud2-div img {
+    width: 40%;
+    animation: cloud-move 7s ease-in-out alternate infinite;
 }
 
 #video-div {
@@ -52,5 +51,11 @@
 
 @keyframes cloud-move {
     from {transform: translate(0, 0);}
-    to {transform: translate(2rem, 0);}
+    to {transform: translate(2em, 0);}
+}
+
+@media screen and (max-width: 768px) {
+    #video-div {
+        display: none;
+    }
 }

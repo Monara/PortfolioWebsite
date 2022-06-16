@@ -23,8 +23,8 @@ const About = ({stars} : {stars:number}) => {
     },
     animate: {
       opacity: 1, //limited brightness in css. Can't change filter here
-      y: '-25vh',
-      x: '25vw',
+      y: '-50%',
+      x: '30%',
       rotate: 180,
       transition: {duration: 8}
     },
@@ -84,7 +84,7 @@ const About = ({stars} : {stars:number}) => {
         animate='animate'
         exit='exit'
       >
-        <h1 id='about-title'><span className=''>ABouT</span></h1>
+        <h1 id='about-title'><span className=''>ABOUT</span></h1>
         <p id='about-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione delectus culpa quos quam harum iste, numquam voluptatibus exercitationem, perspiciatis impedit officia inventore, recusandae dolorum voluptas ab fugiat laudantium? Voluptates, perspiciatis.
         <br /><br />Neque dolores dicta hic voluptates nemo molestiae consequuntur in, ut quod delectus, maiores cumque rerum accusantium aspernatur modi sit similique cum numquam earum quibusdam quia. Vero dolores similique quasi id?
         <br /><br />Aspernatur laboriosam temporibus perferendis quis commodi exercitationem, quaerat unde sit recusandae molestiae maiores ex fugiat qui labore mollitia, sed possimus minus eveniet vel iusto ad iste molestias illo.</p>
@@ -97,12 +97,12 @@ const About = ({stars} : {stars:number}) => {
           <FontAwesomeIcon icon={faNodeJs} />&ensp;
           <FontAwesomeIcon icon={faPhp} />
         </p></div>  
-        <h2 id='contact-title'><span className=''>ConTacT Me</span></h2>
+        <h2 id='contact-title'>CONTACT ME</h2>
         <div className='row' id='text-container'>
           <input type='text' id='email' value={email} readOnly/>
           <FontAwesomeIcon id='copy-icon' icon={faCopy} onClick={() => copyContact(email)}/>
         </div>
-      <div id='trees'><img src={trees} /></div>
+      <div id='trees'><img src={trees} alt='' /></div>
       </motion.div>
       <div className='star-field'>{Array.from(Array(stars), (_, i) => <Star key={i} delay={7} />)}</div>
     </div>    

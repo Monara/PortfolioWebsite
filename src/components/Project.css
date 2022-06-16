@@ -1,6 +1,6 @@
 .Project-container {
-    width: 50%;
-    padding-top: 2rem;
+    width: 60%;
+    padding-top: 5%;
 }
 
 .Project-container h2 {
@@ -13,17 +13,25 @@
     border-radius: 15px;
 }
 
-.text-container {
-    background-color: var(--black);
+.image-container {
     position: relative;
-    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--black);
+    width: 100%;
     opacity: 0.9;
     border-radius: 0 0 13px 13px;
 }
 
 .text-container p {
-    padding: 3%;
-    font-size: 0.8rem;
+    font-size: 0.8em;
+    padding: 1%; 
 }
 
 .link-icon {
@@ -32,4 +40,21 @@
 
 .link-icon:hover {
     color: var(--orange); 
+}
+
+@media screen and (max-width: 768px) {
+    .text-container {
+        margin-top: 0;
+        background: none;
+        border-radius: 0;
+        border-bottom: 2px dotted var(--light-gray);
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .Project-container {
+        width: 80%;
+    }
 }
