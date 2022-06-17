@@ -73,8 +73,8 @@ const Title = ({stars} : {stars:number}) => {
           animate='animate'
           exit='exit'
         >
-            <h1>HI, I'M <span className='gradient'>M</span>ONARA,</h1>
-            <h2>MY LONG SUBTITLE</h2>
+          <h1>HI, I'M <span className='gradient'>M</span>ONARA</h1>
+          <h2>MY LONG SUBTITLE</h2>
         </motion.div>    
       </div>
     </div>

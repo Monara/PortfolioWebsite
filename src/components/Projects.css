@@ -1,11 +1,20 @@
+#projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10em;
+    width: 100vw;
+}
+
 #projects-title {
     color: var(--orange);
 }
 
 #cloud1-div {
+    margin-top: 2%;
     width: 80%;
-    justify-content: flex-end;
-    margin-top: 5%;
+    justify-content: flex-end; 
 }
 
 #cloud1-div img {
@@ -15,7 +24,6 @@
 }
 
 #saturn-div {
-    margin-top: -10%;
     width: 80%;
     justify-content: flex-start;
     z-index: -1;
@@ -29,7 +37,7 @@
 #cloud2-div {
     width: 80%;
     filter: brightness(50%); /*not opacity as stars show through*/
-    margin-top: -5%;
+    margin-top: -8%;
     z-index: -1;
 }
 
@@ -38,20 +46,26 @@
     animation: cloud-move 7s ease-in-out alternate infinite;
 }
 
-#video-div {
-    z-index: -1;
+#backgr {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    margin-top: -80%;
-}
-
-#video-div video {
-    opacity: 0.2;
-    filter: hue-rotate(135deg); 
-}
+    z-index: -2;
+  }
+  
+  #backgr img {
+    width: 100%;
+  }
 
 @keyframes cloud-move {
-    from {transform: translate(0, 0);}
+    from {{transform: translate(0, 0);}}
     to {transform: translate(2em, 0);}
+}
+
+@media screen and (max-width: 640px) {
+    #projects-content {
+        top: 5em;
+    }
 }
 
 @media screen and (max-width: 768px) {

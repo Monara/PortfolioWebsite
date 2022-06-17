@@ -11,7 +11,8 @@ import cloud from '../img/cloud.png';
 import saturn from '../img/saturn.png';
 import {motion} from 'framer-motion';
 import Star from './Star';
-import waves from '../img/waves.mp4';
+import Separator from './Separator';
+import bkg from '../img/future.png';
 
 const Projects = ({stars} : {stars:number}) => {
 
@@ -40,6 +41,12 @@ const Projects = ({stars} : {stars:number}) => {
       animate='animate'
       exit='exit'
     >
+      { modal.show ?
+        <Modal
+          state={[modal, setModal]}
+          images={modal.images}
+        /> :
+        <> 
       <motion.div
         className='row'
         id='cloud1-div'
@@ -47,20 +54,18 @@ const Projects = ({stars} : {stars:number}) => {
       >
         <img src={cloud} alt='' />
       </motion.div>
-      <div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={2}/>)}</div>
-      <h1 id='projects-title'>PROJECTS</h1>
       <div className='row' id='saturn-div'><img src={saturn} alt='' /></div>
       <motion.div 
         className='row'
         id='cloud2-div'
         exit={{x: '-50vw', transition: {duration: 2}}}>
           <img src={cloud} alt='' />
-        </motion.div>
-      { modal.show ?
-      <Modal
-        state={[modal, setModal]}
-        images={modal.images}
-        /> : <></> }
+      </motion.div>
+      <div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={2}/>)}</div>
+
+      <div id='projects-content'>
+        <h1 id='projects-title'>PROJECTS</h1>
+        
         <Project 
           title='COCKTAIL PARTY' 
           img={img1}
@@ -69,7 +74,6 @@ const Projects = ({stars} : {stars:number}) => {
           website='https://www.example.com'
           state={setModal}
           imgs={Images1}
-          
         />
         <Project 
           title='HELSINKI EVENTS' 
@@ -79,27 +83,27 @@ const Projects = ({stars} : {stars:number}) => {
           website='https://www.example.com'
           state={setModal}
           imgs={Images2}
-          
         />
-      <Project 
-        title='ART OF FORMULATION' 
-        img={img3} 
-        description='Back-to-basics tech stack (HTML, CSS, JavaScript, PHP, SQL). Contains a custom calculation widget.' 
-        github='https://www.github.com/' 
-        website='https://www.example.com'
-        state={setModal}
-        imgs={Images3}
-        
+        <Project 
+          title='ART OF FORMULATION' 
+          img={img3} 
+          description='Back-to-basics tech stack (HTML, CSS, JavaScript, PHP, SQL). Contains a custom calculation widget.' 
+          github='https://www.github.com/' 
+          website='https://www.example.com'
+          state={setModal}
+          imgs={Images3}
         /> 
-      <Project 
-        title='THIS WEBSITE'
-        img={img4}
-        description='HTML, CSS, TypeScript, React.js.' 
-        github='https://www.github.com/'
-      /> {/*no modal gallery */}
-      <div id='video-div'>
-        <video autoPlay loop muted><source src={waves} type='video/mp4' /></video>
+        <Project 
+          title='THIS WEBSITE'
+          img={img4}
+          description='HTML, CSS, TypeScript, React.js.' 
+          github='https://www.github.com/'
+        /> {/*no modal gallery */}
+
+        <Separator />
       </div>
+      <div id='backgr'><img src={bkg} alt='' /></div>
+      </> }
     </motion.div>
   )
 }

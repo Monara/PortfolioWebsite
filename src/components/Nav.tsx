@@ -38,7 +38,7 @@ const Nav = () => {
  
   return (
     <>
-    <div id='menu' onClick={() => setShowMenu(!showMenu)}> {/**fullscreen nav being within this div allows to click anywhere but links to exit */}
+    <div id='menu' onClick={() => setShowMenu(!showMenu)}>
       { showMenu ?
       <>
       <div id='xmark' className={iconColor}>

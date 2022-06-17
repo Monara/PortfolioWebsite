@@ -1,5 +1,5 @@
 .Project-container {
-    width: 60%;
+    width: 50%;
     padding-top: 5%;
 }
 
@@ -55,6 +55,6 @@
 
 @media screen and (max-width: 1024px) {
     .Project-container {
-        width: 80%;
+        width: 70%;
     }
 }
