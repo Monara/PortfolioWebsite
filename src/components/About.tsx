@@ -7,7 +7,7 @@ import moon from '../img/moon.png';
 import trees from '../img/trees.png';
 import { motion } from 'framer-motion';
 import Star from  '../components/Star';
-import Separator from '../components/Separator';
+import {Separator, BackgroundImage} from '../components/Elements';
 
 const About = ({stars} : {stars:number}) => {
 
@@ -54,7 +54,7 @@ const About = ({stars} : {stars:number}) => {
 
   return (
     <div className='Main-container'>
-      <div className='star-field'>{Array.from(Array(stars), (_, i) => <Star key={i} delay={7} />)}</div>
+      {/*<div className='star-field'>{Array.from(Array(stars), (_, i) => <Star key={i} delay={7} />)}</div>*/}
       <motion.div
         id='moon'
         variants={moonVariants}
@@ -93,8 +93,7 @@ const About = ({stars} : {stars:number}) => {
         </div>
         <Separator />
       </motion.div>
-      <div id='trees'><img src={trees} alt='' /></div>
-      
+      <BackgroundImage imgSource={trees} />
     </div>    
   )
 }

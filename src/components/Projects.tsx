@@ -11,8 +11,8 @@ import cloud from '../img/cloud.png';
 import saturn from '../img/saturn.png';
 import {motion} from 'framer-motion';
 import Star from './Star';
-import Separator from './Separator';
-import bkg from '../img/future.png';
+import {Separator, BackgroundImage} from './Elements';
+import city from '../img/future.png';
 
 const Projects = ({stars} : {stars:number}) => {
 
@@ -61,7 +61,7 @@ const Projects = ({stars} : {stars:number}) => {
         exit={{x: '-50vw', transition: {duration: 2}}}>
           <img src={cloud} alt='' />
       </motion.div>
-      <div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={2}/>)}</div>
+      {/*<div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={2}/>)}</div>*/}
 
       <div id='projects-content'>
         <h1 id='projects-title'>PROJECTS</h1>
@@ -74,7 +74,7 @@ const Projects = ({stars} : {stars:number}) => {
           website='https://www.example.com'
           state={setModal}
           imgs={Images1}
-        />
+        /> 
         <Project 
           title='HELSINKI EVENTS' 
           img={img2}
@@ -83,7 +83,7 @@ const Projects = ({stars} : {stars:number}) => {
           website='https://www.example.com'
           state={setModal}
           imgs={Images2}
-        />
+        /> 
         <Project 
           title='ART OF FORMULATION' 
           img={img3} 
@@ -92,7 +92,7 @@ const Projects = ({stars} : {stars:number}) => {
           website='https://www.example.com'
           state={setModal}
           imgs={Images3}
-        /> 
+        />
         <Project 
           title='THIS WEBSITE'
           img={img4}
@@ -102,7 +102,7 @@ const Projects = ({stars} : {stars:number}) => {
 
         <Separator />
       </div>
-      <div id='backgr'><img src={bkg} alt='' /></div>
+      <BackgroundImage imgSource={city} />
       </> }
     </motion.div>
   )

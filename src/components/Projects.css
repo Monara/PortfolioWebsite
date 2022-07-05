@@ -4,7 +4,7 @@
     align-items: center;
     position: absolute;
     top: 10em;
-    width: 100vw;
+    width: 100%;
 }
 
 #projects-title {
@@ -54,7 +54,9 @@
   }
   
   #backgr img {
+    position: inherit;
     width: 100%;
+    bottom: 0;
   }
 
 @keyframes cloud-move {

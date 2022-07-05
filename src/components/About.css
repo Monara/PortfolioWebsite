@@ -52,17 +52,6 @@
   filter: brightness(40%);
 }
 
-#trees {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-#trees img {
-  width: 100%;
-}
-
 .icons {
   font-size: 1.5em;
   line-height: 50%;

@@ -52,22 +52,24 @@ const Title = ({stars} : {stars:number}) => {
   return (
 
     <div className='Main-container'>
-      <motion.div exit={{opacity: 0, transition: {duration: 1}}}>{Array.from(Array(stars), (_, i) => <Star key={i} delay={1}/>)}</motion.div>  
-      <div className='circle-container'>        
-        <motion.div className='orbit-big'
-          variants={orbitBigVariants}
-          initial='initial' 
-          animate='animate'
-          exit='exit'>
-          <motion.div className='orbit-small' />
-        </motion.div>
-        <motion.div className='glowing-circle'
+      {/*<motion.div exit={{opacity: 0, transition: {duration: 1}}}>{Array.from(Array(stars), (_, i) => <Star key={i} delay={1}/>)}</motion.div> */} 
+      <div id='title-container'>
+          <motion.div className='orbit-big'
+            variants={orbitBigVariants}
+            initial='initial' 
+            animate='animate'
+            exit='exit'>
+            <motion.div className='orbit-small' />
+          </motion.div>
+          <motion.div className='glowing-circle'
             variants={circleVariants}
             initial='initial' 
             animate='animate'
             exit='exit'
-        />
-        <motion.div className='text'
+          /> 
+      </div>
+      <div id='title-text'>
+        <motion.div
           variants={headingVariants}
           initial='initial'
           animate='animate'
@@ -75,8 +77,8 @@ const Title = ({stars} : {stars:number}) => {
         >
           <h1>HI, I'M <span className='gradient'>M</span>ONARA</h1>
           <h2>MY LONG SUBTITLE</h2>
-        </motion.div>    
-      </div>
+        </motion.div> 
+        </div> 
     </div>
   )
 }
