@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Nav from './components/Nav';
 import Title from './components/Title';
 import About from './components/About';
@@ -10,6 +10,28 @@ function App() {
 
   const stars:number = 10;
   const location = useLocation();
+  const [iconColor, setIconColor] = useState<string>('gradient'); //icon color passed from location
+
+  useEffect (() => {
+    const timer = setTimeout(() => {
+      let color;
+      switch(location.pathname) {
+        case '/':
+          color = 'gradient';
+          break;
+        case '/projects':
+          color = 'orange';
+          break;
+        case '/about':   
+          color = 'pink';
+          break;
+        default:
+          color = 'gray';  
+      }
+      setIconColor(color); //so that menu icon color gets updated 2 seconds after nav link click: after exit animations of pages are done
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   return (
     
@@ -21,7 +43,7 @@ function App() {
           <Route path='/about' element={<About stars={stars} />}/>
         </Routes>
         </AnimatePresence> 
-        <Nav />  
+        <Nav iconColor={iconColor}/>  
       </div>
   );
 }

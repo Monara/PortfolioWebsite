@@ -4,7 +4,7 @@ import './Nav.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faXmark, faEllipsisVertical} from '@fortawesome/free-solid-svg-icons';
 
-const NavLinks = ({fullscreen, iconColor} : {fullscreen:boolean, iconColor?:any}) => {
+const NavLinks = ({fullscreen} : {fullscreen:boolean}) => {
     
   return (
   
@@ -31,10 +31,9 @@ const NavLinks = ({fullscreen, iconColor} : {fullscreen:boolean, iconColor?:any}
 }
 
 
-const Nav = () => {
+const Nav = ({iconColor} : {iconColor: string}) => {
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [iconColor, setIconColor] = useState<string>('gray'); //icon color passed from NavLinks depending on active link
  
   return (
     <>
@@ -44,7 +43,7 @@ const Nav = () => {
       <div id='xmark' className={iconColor}>
         <FontAwesomeIcon icon={faXmark} />
       </div>
-      <NavLinks fullscreen={true} iconColor={setIconColor}/>
+      <NavLinks fullscreen={true} />
       </>  
       : 
       <div id='ellipsis' className={iconColor}><FontAwesomeIcon icon={faEllipsisVertical} /></div> }

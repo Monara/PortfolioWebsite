@@ -57,16 +57,6 @@
     cursor: none;
 }
 
-.gradient {
-    animation: gradient 5s alternate infinite;
-    font-family: var(--font2);
-}
-  
-@keyframes gradient {
-    from  {color: var(--purple);}
-    to {color: var(--pink);}
-}
-
 @keyframes orbit-big {
     0% {transform: skew(5deg, 5deg); border-color: var(--orbit-gray); border-bottom-color: var(--orbit-l-gray);}
     25% {border-color: var(--orbit-gray); border-right-color: var(--orbit-l-gray);}

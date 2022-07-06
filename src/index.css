@@ -56,6 +56,10 @@ p {
   flex-direction: row;
 }
 
+.relative {
+  position: relative;
+}
+
 .Main-container {
   width: 90%;
   min-height: 100%;
@@ -67,9 +71,29 @@ p {
   margin: 0;
 }
 
-.relative {
-  position: relative;
+.pink {
+  color: var(--pink);
 }
+
+.orange {
+  color: var(--orange);
+}
+
+.gray {
+  color: var(--light-gray);
+}
+
+.gradient {
+  animation: gradient 5s alternate infinite;
+  font-family: var(--font2);
+}
+
+@keyframes gradient {
+  from  {color: var(--purple);}
+  to {color: var(--pink);}
+}
+
+
 
 @media screen and (max-width: 1280px) {
   .Main-container {

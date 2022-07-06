@@ -45,21 +45,6 @@ ul > li:hover, .overline {
   text-decoration: overline;
 }
 
-.pink {
-  color: var(--pink);
-}
-
-.orange {
-  color: var(--orange);
-}
-
-.purple {
-  color: var(--purple);
-}
-.gray {
-  color: var(--light-gray);
-}
-
 #xmark, #ellipsis {
   font-size: 1.6em;
   z-index: 1;

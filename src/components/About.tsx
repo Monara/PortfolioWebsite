@@ -25,7 +25,7 @@ const About = ({stars} : {stars:number}) => {
     animate: {
       opacity: 1, //limited brightness in css. Can't change filter here
       y: '-50%',
-      x: '60%',
+      x: '70%',
       rotate: 180,
       transition: {duration: 8}
     },
@@ -92,8 +92,8 @@ const About = ({stars} : {stars:number}) => {
           <FontAwesomeIcon id='copy-icon' icon={faCopy} onClick={() => copyContact(email)}/>
         </div>
         <Separator />
+        <BackgroundImage imgSource={trees} />
       </motion.div>
-      <BackgroundImage imgSource={trees} />
     </div>    
   )
 }
