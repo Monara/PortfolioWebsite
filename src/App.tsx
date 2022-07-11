@@ -8,29 +8,43 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-  const stars:number = 10;
+  const stars:number = 30;
   const location = useLocation();
-  const [iconColor, setIconColor] = useState<string>('gradient'); //icon color passed from location
+  const [iconClass, setIconClass] = useState<string>('');
+
+  const addClass = (sec:number, classname:string) => {
+    return new Promise((res, _) => {
+      setTimeout(() => {
+        setIconClass(classname);
+        res('class added');
+      }, sec);
+    });
+  }
 
   useEffect (() => {
-    const timer = setTimeout(() => {
-      let color;
-      switch(location.pathname) {
-        case '/':
-          color = 'gradient';
-          break;
-        case '/projects':
-          color = 'orange';
-          break;
-        case '/about':   
-          color = 'pink';
-          break;
-        default:
-          color = 'gray';  
-      }
-      setIconColor(color); //so that menu icon color gets updated 2 seconds after nav link click: after exit animations of pages are done
-    }, 2000);
-    return () => clearTimeout(timer);
+    let color:string;
+
+    switch(location.pathname) {
+      case '/':
+        color = 'gradient';
+        break;
+      case '/projects':
+        color = 'orange';
+        break;
+      case '/about':   
+        color = 'pink';
+        break;
+      default:
+        color = 'gray';   
+    }
+
+    if(iconClass === '') addClass(0, color); //don't fade
+
+    else {
+      let classes = 'fade '.concat(iconClass);  
+      addClass(1000, classes).then(() => addClass(1000, color)); //fade current color in 1 sec, then switch to new
+    }  
+
   }, [location.pathname]);
 
   return (
@@ -39,11 +53,11 @@ function App() {
         <AnimatePresence exitBeforeEnter> {/**without exit the next element is partially shown */}
         <Routes location={location} key={location.key}>
           <Route path='/' element={<Title stars={stars} />} />
-          <Route path='/projects' element={<Projects stars={stars} />}/>
+          <Route path='/projects' element={<Projects />}/>
           <Route path='/about' element={<About stars={stars} />}/>
         </Routes>
         </AnimatePresence> 
-        <Nav iconColor={iconColor}/>  
+        <Nav iconClass={iconClass}/>  
       </div>
   );
 }

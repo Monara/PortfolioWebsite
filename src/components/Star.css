@@ -1,21 +1,21 @@
 .star-div {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 
 .star {
-    width: 2px;
-    height: 2px;
-    border-radius:50%;
-    background-color: var(--black);
-    position: absolute;
-    opacity: 0.3;
+    width: 1px;
+    height: 1px;
+    background-color: whitesmoke;
 }
 
-
 @keyframes glowing-star {
-    0% {opacity: 0; background-color: whitesmoke;}
-    10% {opacity: 1; box-shadow: 0 0 5px white, 0 0 10px var(--orange), 0 0 15px var(--pink), 0 0 20px white, 0 0 25px var(--orbit-gray);}
-    90% {opacity: 1; box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 30px var(--blue), 0 0 40px lightblue 0 0 50px lightblue;}
-    100% {opacity: 0; background-color: whitesmoke;}
+    
+    0% {opacity: 0;}
+    20% {box-shadow: 0 0 0.25rem white, 0 0 0.5rem var(--orange), 0 0 0.75rem var(--pink), 0 0 1rem white, 0 0 1.25rem var(--orbit-gray);}
+    30% {opacity: 0.8;}
+    70% {opacity: 0.8;}
+    80% {box-shadow: 0 0 0.25rem white, 0 0 0.5rem white, 0 0 0.75rem white, 0 0 1rem white, 0 0 1.25rem var(--blue), 0 0 1.5rem lightblue 0 0 1.75rem lightblue;}
+    100% {opacity: 0;}
+    
 }

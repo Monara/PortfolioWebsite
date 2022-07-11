@@ -46,21 +46,7 @@
     animation: cloud-move 7s ease-in-out alternate infinite;
 }
 
-#backgr {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: -2;
-  }
-  
-  #backgr img {
-    position: inherit;
-    width: 100%;
-    bottom: 0;
-  }
-
 @keyframes cloud-move {
-    from {{transform: translate(0, 0);}}
     to {transform: translate(2em, 0);}
 }
 

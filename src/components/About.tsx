@@ -54,7 +54,6 @@ const About = ({stars} : {stars:number}) => {
 
   return (
     <div className='Main-container'>
-      {/*<div className='star-field'>{Array.from(Array(stars), (_, i) => <Star key={i} delay={7} />)}</div>*/}
       <motion.div
         id='moon'
         variants={moonVariants}
@@ -71,6 +70,7 @@ const About = ({stars} : {stars:number}) => {
         animate='animate'
         exit='exit'
       >
+        {Array.from({length: stars}, (_, i) => <Star key={i}/>)}
         <h1 id='about-title'>ABOUT</h1>
         <p id='about-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione delectus culpa quos quam harum iste, numquam voluptatibus exercitationem, perspiciatis impedit officia inventore, recusandae dolorum voluptas ab fugiat laudantium? Voluptates, perspiciatis.
         <br /><br />Neque dolores dicta hic voluptates nemo molestiae consequuntur in, ut quod delectus, maiores cumque rerum accusantium aspernatur modi sit similique cum numquam earum quibusdam quia. Vero dolores similique quasi id?

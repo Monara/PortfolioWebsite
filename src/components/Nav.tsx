@@ -31,7 +31,7 @@ const NavLinks = ({fullscreen} : {fullscreen:boolean}) => {
 }
 
 
-const Nav = ({iconColor} : {iconColor: string}) => {
+const Nav = ({iconClass} : {iconClass: string}) => {
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
  
@@ -40,13 +40,13 @@ const Nav = ({iconColor} : {iconColor: string}) => {
     <div id='menu' onClick={() => setShowMenu(!showMenu)}>
       { showMenu ?
       <>
-      <div id='xmark' className={iconColor}>
+      <div id='xmark' className={iconClass}>
         <FontAwesomeIcon icon={faXmark} />
       </div>
       <NavLinks fullscreen={true} />
       </>  
       : 
-      <div id='ellipsis' className={iconColor}><FontAwesomeIcon icon={faEllipsisVertical} /></div> }
+      <div id='ellipsis' className={iconClass}><FontAwesomeIcon icon={faEllipsisVertical} /></div> }
     </div>
     <NavLinks fullscreen={false} />
     </>

@@ -14,7 +14,7 @@ import Star from './Star';
 import {Separator, BackgroundImage} from './Elements';
 import city from '../img/future.png';
 
-const Projects = ({stars} : {stars:number}) => {
+const Projects = () => {
 
   const [modal, setModal] = useState({show: false, images: ['']});//for children: set true on img div click in Project, set false on clicking X icon in Modal
   //which images modal will show
@@ -61,7 +61,6 @@ const Projects = ({stars} : {stars:number}) => {
         exit={{x: '-50vw', transition: {duration: 2}}}>
           <img src={cloud} alt='' />
       </motion.div>
-      {/*<div>{Array.from(Array(stars), (_, i) => <Star key={i} delay={2}/>)}</div>*/}
 
       <div id='projects-content'>
         <h1 id='projects-title'>PROJECTS</h1>

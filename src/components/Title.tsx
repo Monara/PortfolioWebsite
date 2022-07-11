@@ -19,7 +19,7 @@ const Title = ({stars} : {stars:number}) => {
     }
   };
 
-  const circleVariants = {
+  const lastToFadeVariants = {
     initial: {
       opacity: 0
     },
@@ -39,7 +39,7 @@ const Title = ({stars} : {stars:number}) => {
     },
     animate: {
       x: 0,
-      transition: {duration: 1, delay: 1}
+      transition: {duration: 0.5, delay: 1.5}
     },
     exit: {
       opacity: 0,
@@ -50,7 +50,12 @@ const Title = ({stars} : {stars:number}) => {
   return (
 
     <div className='Main-container'>
-      {/*<motion.div exit={{opacity: 0, transition: {duration: 1}}}>{Array.from(Array(stars), (_, i) => <Star key={i} delay={1}/>)}</motion.div> */} 
+      <motion.div
+        variants={lastToFadeVariants}
+        initial='initial' 
+        animate='animate'
+        exit='exit'>
+      {Array.from({length: stars}, (_, i) => <Star key={i}/>)}</motion.div> 
       <div id='title-container'>
           <motion.div className='orbit-big'
             variants={orbitBigVariants}
@@ -60,7 +65,7 @@ const Title = ({stars} : {stars:number}) => {
             <motion.div className='orbit-small' />
           </motion.div>
           <motion.div className='glowing-circle'
-            variants={circleVariants}
+            variants={lastToFadeVariants}
             initial='initial' 
             animate='animate'
             exit='exit'
