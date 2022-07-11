@@ -10,7 +10,6 @@ import './Projects.css';
 import cloud from '../img/cloud.png';
 import saturn from '../img/saturn.png';
 import {motion} from 'framer-motion';
-import Star from './Star';
 import {Separator, BackgroundImage} from './Elements';
 import city from '../img/future.png';
 

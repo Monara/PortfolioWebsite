@@ -3,15 +3,11 @@ import './Modal.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronRight, faChevronLeft, faXmark, faCircle} from '@fortawesome/free-solid-svg-icons';
 
-
-//edit state type
-
-const Modal = ({state, images} : {state:any, images:any}) => {
+const Modal = ({state, images} : {state:[{}, Function], images:string[]}) => {
 
     let [index, setIndex] = useState<number>(0);
     
     return (
-        
         <div className='Modal-container'>
             <div className='Modal'>   
             <div className='xmark'><FontAwesomeIcon icon={faXmark} id='xmark-icon' onClick={()=>{state[1]({...state[0], show: false});}}/></div>

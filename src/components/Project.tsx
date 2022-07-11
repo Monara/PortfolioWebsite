@@ -4,8 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
 
-//fix state type
-const Project = ({title, img, description, github, website, state, imgs} : {title:string, img:string, description:string, github:string, website?:string, state?:any, imgs?:string[]}) => {
+const Project = ({title, img, description, github, website, state, imgs} : {title:string, img:string, description:string, github:string, website?:string, state?:Function, imgs?:string[]}) => {
 
   return (
 
