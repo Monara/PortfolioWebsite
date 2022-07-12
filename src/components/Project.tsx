@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
 
-const Project = ({title, img, description, github, website, state, imgs} : {title:string, img:string, description:string, github:string, website?:string, state?:Function, imgs?:string[]}) => {
+const Project = ({title, img, description, github, website, setState, imgs} : {title:string, img:string, description:string, github:string, website?:string, setState?:Function, imgs?:string[]}) => {
 
   return (
 
@@ -15,9 +15,9 @@ const Project = ({title, img, description, github, website, state, imgs} : {titl
           <a href={website} target='_blank' rel='noopener noreferrer'><FontAwesomeIcon className='link-icon' icon={faArrowUpRightFromSquare} /></a>}
       </h2>
 
-      { state && imgs ?
+      { setState && imgs ?
 
-      <div className='image-container' onClick={() => state({show: true, images: imgs})}>
+      <div className='image-container' onClick={() => setState({show: true, images: imgs})}>
         <img style={{cursor: 'pointer'}} src={img} alt='Portfolio website screenshot'/>
         <div className='text-container'>
           <p>{description}</p>   

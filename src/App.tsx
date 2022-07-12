@@ -12,16 +12,17 @@ function App() {
   const location = useLocation();
   const [iconClass, setIconClass] = useState<string>('');
 
-  const addClass = (sec:number, classname:string) => {
-    return new Promise((res, _) => {
-      setTimeout(() => {
-        setIconClass(classname);
-        res('class added');
-      }, sec);
-    });
-  }
-
   useEffect (() => {
+
+    const addClass = (sec:number, classname:string) => {
+      return new Promise((res, _) => {
+        setTimeout(() => {
+          setIconClass(classname);
+          res('class added');
+        }, sec);
+      });
+    }
+
     let color:string;
 
     switch(location.pathname) {
@@ -44,7 +45,7 @@ function App() {
       let classes = 'fade '.concat(iconClass);  
       addClass(1000, classes).then(() => addClass(1000, color)); //fade current color in 1 sec, then switch to new
     }  
-
+    // eslint-disable-next-line
   }, [location.pathname]);
 
   return (

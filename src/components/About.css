@@ -48,7 +48,7 @@
 
 #moon img {
   height: 20vw;
-  min-height: 150px;
+  min-height: 130px;
   filter: brightness(40%);
 }
 
@@ -61,14 +61,12 @@
   #about-text {
     margin: 0 15%;
   }
-
 }
 
 @media screen and (max-width: 640px) {
   #about-content {
       top: 5em;
   }
-
 }
 
   

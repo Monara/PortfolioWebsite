@@ -33,6 +33,7 @@ const Projects = () => {
   }
 
   return (
+    <>
     <motion.div 
       className='Main-container'
       variants={contentVariants}
@@ -40,12 +41,6 @@ const Projects = () => {
       animate='animate'
       exit='exit'
     >
-      { modal.show ?
-        <Modal
-          state={[modal, setModal]}
-          images={modal.images}
-        /> :
-        <> 
       <motion.div
         className='row'
         id='cloud1-div'
@@ -64,31 +59,32 @@ const Projects = () => {
       <div id='projects-content'>
         <h1 id='projects-title'>PROJECTS</h1>
         
-        <Project 
+        {/*projects set show to TRUE, set image array*/}
+        <Project
           title='COCKTAIL PARTY' 
           img={img1}
           description='HTML, CSS, JavaScript, React.js, Node.js, SQL, Express.js. Bilingual, responsive, with a custom API.'
           github='https://www.github.com/' 
           website='https://www.example.com'
-          state={setModal}
+          setState={setModal}
           imgs={Images1}
         /> 
-        <Project 
+        <Project
           title='HELSINKI EVENTS' 
           img={img2}
           description='HTML, Tailwind CSS, JavaScript, React.js, Node.js, Express.js. Uses MyHelsinki Open API.'
           github='https://www.github.com/' 
           website='https://www.example.com'
-          state={setModal}
+          setState={setModal}
           imgs={Images2}
         /> 
-        <Project 
+        <Project
           title='ART OF FORMULATION' 
           img={img3} 
           description='Back-to-basics tech stack (HTML, CSS, JavaScript, PHP, SQL). Contains a custom calculation widget.' 
           github='https://www.github.com/' 
           website='https://www.example.com'
-          state={setModal}
+          setState={setModal}
           imgs={Images3}
         />
         <Project 
@@ -101,8 +97,11 @@ const Projects = () => {
         <Separator />
       </div>
       <BackgroundImage imgSource={city} />
-      </> }
+      {/*modal sets show to FALSE, sets image index to show*/}
     </motion.div>
+    { modal.show &&
+      <Modal state={[modal, setModal]}/>}
+    </>   
   )
 }
 

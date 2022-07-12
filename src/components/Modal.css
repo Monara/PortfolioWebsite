@@ -10,12 +10,10 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    opacity: 1;
     display: flex;
     flex-direction: column;
     z-index: 2;
-    background-color: var(--black);
-    overflow: hidden;
+    background-color: var(--transp-black);
 }
 
 #circles-div {
@@ -27,6 +25,7 @@
 .circle-marker {
     padding: 0.3em;
     font-size: 0.7em;
+    cursor: pointer;
 }
 
 .marked {
@@ -71,6 +70,7 @@
     max-width: 100%;
     max-height: 100%;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #xmark-icon, .arrow-icon {
@@ -79,4 +79,11 @@
 
 #xmark-icon:hover, .arrow-icon:hover {
     color: var(--orange);
+}
+
+@media screen and (max-width: 640px) {
+    #xmark-icon {
+        padding-right: 4%;
+        padding-top: 4%;
+    }
 }

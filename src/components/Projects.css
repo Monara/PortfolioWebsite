@@ -55,9 +55,3 @@
         top: 5em;
     }
 }
-
-@media screen and (max-width: 768px) {
-    #video-div {
-        display: none;
-    }
-}

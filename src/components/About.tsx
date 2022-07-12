@@ -25,9 +25,9 @@ const About = ({stars} : {stars:number}) => {
     animate: {
       opacity: 1, //limited brightness in css. Can't change filter here
       y: '-50%',
-      x: '70%',
+      x: '75%',
       rotate: 180,
-      transition: {duration: 8}
+      transition: {duration: 6}
     },
     exit: {
       opacity: 0,
@@ -54,6 +54,7 @@ const About = ({stars} : {stars:number}) => {
 
   return (
     <div className='Main-container'>
+      
       <motion.div
         id='moon'
         variants={moonVariants}
@@ -62,7 +63,7 @@ const About = ({stars} : {stars:number}) => {
         exit='exit'
       ><img src={moon} alt='' />
       </motion.div>
-
+      
       <motion.div
         id='about-content'
         variants={contentVariants}

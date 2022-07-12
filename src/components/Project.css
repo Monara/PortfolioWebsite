@@ -59,7 +59,7 @@
         margin-top: 0;
         background: none;
         border-radius: 0;
-        border-bottom: 2px dotted var(--light-gray);
+        border-bottom: 1px dotted var(--light-gray);
         position: relative;
     }
 }

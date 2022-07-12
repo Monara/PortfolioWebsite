@@ -13,7 +13,7 @@ const Star = () => {
     return Math.floor(Math.random() * (30-10+1) + 10); //random star glow interval, 10-30s.
   }
 
-  const [timer, _] = useState(randomInterval());
+  const [timer, ] = useState(randomInterval());
   const [xy, setXY] = useState(randomXY());
 
   useEffect(() => { //position changes
@@ -21,7 +21,7 @@ const Star = () => {
     const interval = setInterval(() => {
       setXY(pos);}, (timer * 1000)); //timer in seconds
     return () => clearInterval(interval);
-  }, [xy]);
+  }, [xy, timer]);
 
   /*insert prop & random styling */
   const style1 = {
